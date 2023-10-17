@@ -1,4 +1,4 @@
 transformers
 pipeline
 fastapi
-uvicorn
+'uvicorn[standard]'

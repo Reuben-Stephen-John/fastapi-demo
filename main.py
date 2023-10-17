@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from concurrent.futures import ProcessPoolExecutor
 from transformers import pipeline
 import asyncio
+import uvicorn
 
 app = FastAPI()
 # Use a global variable for the model
@@ -64,3 +65,5 @@ async def process(request: Request):
     else:
         raise HTTPException(status_code=400, detail="Missing prompt parameter")
 
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
