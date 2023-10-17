@@ -2,4 +2,4 @@ transformers
 pipeline
 fastapi
 uvicorn[standard]
-torch
+pytorch-lightning
